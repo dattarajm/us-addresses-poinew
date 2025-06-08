@@ -13,12 +13,12 @@ st.markdown("View Points of Interest from Snowflake with Map, Filters, and Visua
 @st.cache_resource
 def get_connection():
     return snowflake.connector.connect(
-        user=st.secrets["snowflake"]["user"],
-        password=st.secrets["snowflake"]["password"],
-        account=st.secrets["snowflake"]["account"],
-        warehouse=st.secrets["snowflake"]["warehouse"],
-        database=st.secrets["snowflake"]["database"],
-        schema=st.secrets["snowflake"]["schema"]
+        user=st.secrets["user"],
+        password=st.secrets["password"],
+        account=st.secrets["account"],
+        warehouse=st.secrets["warehouse"],
+        database=st.secrets["database"],
+        schema=st.secrets["schema"]
     )
 
 # Attempt to connect
